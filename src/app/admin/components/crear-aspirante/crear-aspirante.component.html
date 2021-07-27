@@ -1,0 +1,58 @@
+<p>crear-aspirante works!</p>
+<form >
+    <mat-card>
+   
+        <mat-form-field>    
+            <mat-label>nombre</mat-label>
+            <input matInput type="text" required placeholder="Ex. nombre" />
+          
+            <mat-hint align="end">nombre</mat-hint>
+            <mat-error> este campo es requerido</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>tipo de identificacion</mat-label>
+            <input matInput type="text" required  />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>numero de identificacion</mat-label>
+            <input matInput type="text" required  />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>fecha de nacimiento</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>telefono fijo</mat-label>
+            <input matInput type="number" required  />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>celular</mat-label>
+            <input matInput type="number"   />
+          </mat-form-field>
+           
+          <mat-form-field>
+            <mat-label>ciudad</mat-label>
+            <input matInput type="text"   />
+          </mat-form-field>
+          
+          <mat-form-field>
+            <mat-label>Direccion</mat-label>
+            <input matInput type="text"   />
+          </mat-form-field>
+          <mat-form-field>
+              <mat-label>cargo</mat-label>
+            <mat-select>
+                <mat-option value="front" >front</mat-option>
+                <mat-option value="back" >back</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <button mat-raised-button color='accent'>submit</button>
+          
+
+         
+</mat-card>
+
+</form>
